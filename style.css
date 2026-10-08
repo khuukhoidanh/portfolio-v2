@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root{
+  --btn--:#ff5e6c;
+  --btn-hover--:#0F766E;
+  --text-color--:#2B1A2E;
+  --bg-color--:#fff5d7;
+  --nav-color--:#e5d091;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--bg-color--);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: var(--nav-color--);
+  margin-bottom: 50px;
+}
+#nav_right h1{
+  font-family: "Fraunces", serif;
+  font-size: 50px;
+}
+#qr_btn{
+  padding: 10px 30px;
+  border-radius: 15px;
+  background-color: var(--btn--);
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-color--);
+  font-weight: 500;
+}
+
+/* MAIN */
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  transition: 0.3s ease;
+}
+main[hidden]{
+  display: none !important;
+}
+.socialmedia{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  border: solid 2px var(--text-color--);
+  padding: 10px 20px;
+  width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.socialmedia .logo{
+  width: 50px;
+}
+
+.socialmedia .text{
+  text-decoration: none;
+  color: var(--text-color--);
+  font-size: 40px;
+  font-weight: 500;
+}
+.copy_group{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 8px;
+  cursor: pointer ;
+}
+.socialmedia .copy_group span{
+  padding-left:0px;
+}
+.socialmedia .copy_group .copy{
+  width: 30px;
+}
+
+
+#qrcode_page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#qrcode_page[hidden]{
+  display: none !important;
+}
+
+#qrcode_page img{
+  width: 500px;
+}
+
+
+/* Tablet và điện thoại */
+@media (max-width: 600px){
+
+  /* Nav: xếp dọc, tiêu đề trên, nút QR dưới */
+  nav{
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 16px 0;
+    height: 240px;
+  }
+  #nav_right{
+    margin: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav_right{
+    position: static;
+    margin: 0;
+  }
+
+  #nav_right h1{
+    font-size: 40px;
+    text-align: left;
+  }
+
+  /* Khu vực các khung social */
+  main{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+    margin: 24px 0 0;
+    padding: 0 16px;
+  }
+
+  .socialmedia{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;  /* quan trọng nhất: bỏ margin auto */
+    gap: 16px;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+
+  .socialmedia .logo{
+    width: 36px;
+  }
+
+  .socialmedia .text{
+    font-size: 24px;
+  }
+
+  .copy_group span{
+    font-size: 12px;
+  }
+
+  .copy_group .copy{
+    width: 20px;
+  }
+}
+
+.socialmedia:hover{
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+
+main,
+#qrcode_page {
+  animation: pageIn 0.4s ease;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
