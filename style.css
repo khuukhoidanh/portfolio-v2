@@ -102,6 +102,10 @@ main[hidden]{
 #qrcode_page img{
   width: 500px;
 }
+#qrcode_page span{
+  font-size: 20px;
+  padding-left: 20px;
+}
 
 
 /* Tablet và điện thoại */
@@ -164,6 +168,20 @@ main[hidden]{
 
   .copy_group .copy{
     width: 20px;
+  }
+
+  #qrcode_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  #qrcode_page img{
+    width: 300px;
+  }
+  #qrcode_page span{
+    text-align: center;
   }
 }
 
