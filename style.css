@@ -17,6 +17,9 @@
 body{
   min-height: 100vh;
   background-color: var(--bg-color--);
+  display: flex;
+  flex-direction: column;
+  
 }
 nav{
   display: flex;
@@ -52,6 +55,7 @@ main{
 main[hidden]{
   display: none !important;
 }
+
 .socialmedia{
   display: flex;
   align-items: center;
@@ -110,7 +114,7 @@ main[hidden]{
 
 
 /* Tablet và điện thoại */
-@media (max-width: 600px){
+@media (max-width: 983px){
 
   /* Nav: xếp dọc, tiêu đề trên, nút QR dưới */
   nav{
@@ -206,3 +210,4 @@ main,
     transform: translateY(0);
   }
 }
+
